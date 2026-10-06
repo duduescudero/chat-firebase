@@ -12,6 +12,27 @@ function requireEnv(name: string): string {
   return value;
 }
 
+/**
+ * Aceita a chave em vários formatos colados no painel da hospedagem:
+ * com "\\n" literais, com quebras de linha reais, com aspas externas e com vírgula no final.
+ */
+function normalizePrivateKey(raw: string): string {
+  let key = raw.trim().replace(/,$/, '').trim();
+  if (
+    (key.startsWith('"') && key.endsWith('"')) ||
+    (key.startsWith("'") && key.endsWith("'"))
+  ) {
+    key = key.slice(1, -1);
+  }
+  key = key.replace(/\\n/g, '\n').replace(/\r/g, '').trim();
+  if (!key.includes('-----BEGIN PRIVATE KEY-----') || !key.includes('-----END PRIVATE KEY-----')) {
+    throw new Error(
+      'FIREBASE_PRIVATE_KEY inválida: copie o valor inteiro, de -----BEGIN PRIVATE KEY----- até -----END PRIVATE KEY-----.',
+    );
+  }
+  return `${key}\n`;
+}
+
 function createApp(): App {
   const existing = getApps()[0];
   if (existing) return existing;
@@ -19,8 +40,7 @@ function createApp(): App {
     credential: cert({
       projectId: requireEnv('FIREBASE_PROJECT_ID'),
       clientEmail: requireEnv('FIREBASE_CLIENT_EMAIL'),
-      // Em hospedagens a chave costuma vir com "\n" literal.
-      privateKey: requireEnv('FIREBASE_PRIVATE_KEY').replace(/\\n/g, '\n'),
+      privateKey: normalizePrivateKey(requireEnv('FIREBASE_PRIVATE_KEY')),
     }),
     databaseURL: requireEnv('FIREBASE_DATABASE_URL'),
   });
