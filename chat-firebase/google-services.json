@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "173093218817",
+    "project_id": "chat-fiap-12d72",
+    "storage_bucket": "chat-fiap-12d72.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:173093218817:android:53dff514b7748f80f6ae00",
+        "android_client_info": {
+          "package_name": "br.com.fiap.chatfirebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNb_x_5nfuJp_6yxONHhtluXgNtzMFQGY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

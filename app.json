@@ -1,0 +1,44 @@
+{
+  "expo": {
+    "name": "Chat Firebase",
+    "slug": "chat-firebase",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "scheme": "chatfirebase",
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "br.com.fiap.chatfirebase",
+      "googleServicesFile": "./GoogleService-Info.plist",
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "O app precisa acessar suas fotos para escolher a foto de perfil e a foto do grupo.",
+        "UIBackgroundModes": ["remote-notification"]
+      }
+    },
+    "android": {
+      "package": "br.com.fiap.chatfirebase",
+      "googleServicesFile": "./google-services.json",
+      "permissions": ["POST_NOTIFICATIONS"]
+    },
+    "plugins": [
+      "expo-dev-client",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "O app precisa acessar suas fotos para escolher a foto de perfil e a foto do grupo."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "color": "#2563eb"
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "COLE-AQUI-O-PROJECT-ID-DO-EAS"
+      }
+    }
+  }
+}
