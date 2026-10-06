@@ -12,13 +12,18 @@
       "googleServicesFile": "./GoogleService-Info.plist",
       "infoPlist": {
         "NSPhotoLibraryUsageDescription": "O app precisa acessar suas fotos para escolher a foto de perfil e a foto do grupo.",
-        "UIBackgroundModes": ["remote-notification"]
+        "UIBackgroundModes": [
+          "remote-notification"
+        ]
       }
     },
     "android": {
       "package": "br.com.fiap.chatfirebase",
       "googleServicesFile": "./google-services.json",
-      "permissions": ["POST_NOTIFICATIONS"]
+      "permissions": [
+        "android.permission.POST_NOTIFICATIONS",
+        "android.permission.RECORD_AUDIO"
+      ]
     },
     "plugins": [
       "expo-dev-client",
@@ -37,8 +42,9 @@
     ],
     "extra": {
       "eas": {
-        "projectId": "COLE-AQUI-O-PROJECT-ID-DO-EAS"
+        "projectId": "bada0533-b944-4b56-97bf-f1d4440b8a82"
       }
-    }
+    },
+    "owner": "duduescudero9"
   }
 }
