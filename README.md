@@ -18,7 +18,7 @@ CheckPoint 2 — Mobile Development & IoT.
 | Repositório | https://github.com/duduescudero/chat-firebase |
 | API de notificações (HTTPS) | https://chat-firebase-9hhp.onrender.com |
 | Health check da API | https://chat-firebase-9hhp.onrender.com/health |
-| Build Android (APK `preview`) | https://expo.dev/accounts/duduescudero9/projects/chat-firebase/builds/9ed07529-5fc3-449c-b142-2d319c51f4c3 |
+| Build Android (APK `preview`) | [https://expo.dev/accounts/duduescudero9/projects/chat-firebase/builds/9ed07529-5fc3-449c-b142-2d319c51f4c3](https://expo.dev/accounts/duduescudero9/projects/chat-firebase/builds/11562c02-47ab-4494-8d86-65dff51a14a3) |
  
 > ⏳ A API usa o plano gratuito do Render, que "dorme" após alguns minutos sem uso. Se a primeira chamada demorar (~50 s), acesse `/health` e aguarde o servidor acordar.
  
