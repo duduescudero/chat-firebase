@@ -1,4 +1,4 @@
-{
+﻿{
   "cli": { "version": ">= 16.0.0", "appVersionSource": "remote" },
   "build": {
     "development": {
@@ -6,7 +6,11 @@
       "distribution": "internal",
       "android": { "buildType": "apk" }
     },
-    "preview": { "distribution": "internal", "android": { "buildType": "apk" } },
+    "preview": {
+      "distribution": "internal",
+      "android": { "buildType": "apk" },
+      "env": { "EXPO_PUBLIC_API_URL": "https://chat-firebase-9hhp.onrender.com" }
+    },
     "production": {}
   }
 }
